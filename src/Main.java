@@ -84,6 +84,31 @@ public class Main implements Runnable {
         Fish5.wrap();
         Fish6.wrap();
         shark.bounce();
+        if(shark.rec.intersects(Fish1.rec)  && shark.isCrashing == false){
+            shark.height = 80;
+            shark.width=80;
+          Fish1.isAlive = false;
+
+            shark.xpos = shark.xpos;
+            shark.isCrashing=true;
+
+        }
+        if(shark.rec.intersects(Fish1.rec)== false){
+            shark.isCrashing=false;
+        }
+        if(shark.rec.intersects(Fish2.rec)  && shark.isCrashing == false){
+            shark.height = 100;
+            shark.width=100;
+            Fish2.isAlive = false;
+
+            shark.xpos = shark.xpos;
+            shark.isCrashing=true;
+
+        }
+        if(shark.rec.intersects(Fish2.rec)== false){
+            shark.isCrashing=false;
+        }
+
     }
     public void pause(int time ){
         //sleep
@@ -127,8 +152,12 @@ public class Main implements Runnable {
 
         //draw the image of the astronaut
         g.drawImage(backround, 0, 0, WIDTH, HEIGHT, null);
-        g.drawImage(Fish1Pic, Fish1.xpos, Fish1.ypos, Fish1.width, Fish1.height, null);
-        g.drawImage(Fish2Pic, Fish2.xpos, Fish2.ypos, Fish2.width, Fish2.height, null);
+        if(Fish1.isAlive== true) {
+            g.drawImage(Fish1Pic, Fish1.xpos, Fish1.ypos, Fish1.width, Fish1.height, null);
+        }
+        if( Fish2.isAlive==true){
+            g.drawImage(Fish2Pic, Fish2.xpos, Fish2.ypos, Fish2.width, Fish2.height, null);
+        }
         g.drawImage(Fish3Pic, Fish3.xpos, Fish3.ypos, Fish3.width, Fish3.height, null);
         g.drawImage(Fish4Pic, Fish4.xpos, Fish4.ypos, Fish4.width, Fish4.height, null);
         g.drawImage(sharkPic, shark.xpos, shark.ypos, shark.width, shark.height, null);
