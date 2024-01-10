@@ -108,6 +108,55 @@ public class Main implements Runnable {
         if(shark.rec.intersects(Fish2.rec)== false){
             shark.isCrashing=false;
         }
+        if(shark.rec.intersects(Fish3.rec)  && shark.isCrashing == false){
+            shark.height = 120;
+            shark.width=120;
+            Fish3.isAlive = false;
+
+            shark.xpos = shark.xpos;
+            shark.isCrashing=true;
+
+        }
+        if(shark.rec.intersects(Fish3.rec)== false){
+            shark.isCrashing=false;
+        }
+        if(shark.rec.intersects(Fish4.rec)  && shark.isCrashing == false){
+            shark.height = 140;
+            shark.width=140;
+            Fish4.isAlive = false;
+
+            shark.xpos = shark.xpos;
+            shark.isCrashing=true;
+
+        }
+        if(shark.rec.intersects(Fish4.rec)== false){
+            shark.isCrashing=false;
+        }
+        if(shark.rec.intersects(Fish5.rec)  && shark.isCrashing == false){
+            shark.height = 160;
+            shark.width=160;
+            Fish5.isAlive = false;
+
+            shark.xpos = shark.xpos;
+            shark.isCrashing=true;
+
+        }
+        if(shark.rec.intersects(Fish5.rec)== false){
+            shark.isCrashing=false;
+        }
+        if(shark.rec.intersects(Fish6.rec)  && shark.isCrashing == false){
+            shark.height = 180;
+            shark.width=180;
+            Fish6.isAlive = false;
+
+            shark.xpos = shark.xpos;
+            shark.isCrashing=true;
+
+        }
+        if(shark.rec.intersects(Fish6.rec)== false){
+            shark.isCrashing=false;
+        }
+
 
     }
     public void pause(int time ){
@@ -158,6 +207,20 @@ public class Main implements Runnable {
         if( Fish2.isAlive==true){
             g.drawImage(Fish2Pic, Fish2.xpos, Fish2.ypos, Fish2.width, Fish2.height, null);
         }
+        if( Fish3.isAlive==true){
+            g.drawImage(Fish3Pic, Fish3.xpos, Fish3.ypos, Fish3.width, Fish3.height, null);
+        }
+        if( Fish4.isAlive==true){
+            g.drawImage(Fish4Pic, Fish4.xpos, Fish4.ypos, Fish4.width, Fish4.height, null);
+        }
+        if( Fish5.isAlive==true){
+            g.drawImage(Fish5Pic, Fish5.xpos, Fish5.ypos, Fish5.width, Fish5.height, null);
+        }
+        if( Fish6.isAlive==true){
+            g.drawImage(Fish6Pic, Fish6.xpos, Fish6.ypos, Fish6.width, Fish6.height, null);
+        }
+
+        
         g.drawImage(Fish3Pic, Fish3.xpos, Fish3.ypos, Fish3.width, Fish3.height, null);
         g.drawImage(Fish4Pic, Fish4.xpos, Fish4.ypos, Fish4.width, Fish4.height, null);
         g.drawImage(sharkPic, shark.xpos, shark.ypos, shark.width, shark.height, null);
