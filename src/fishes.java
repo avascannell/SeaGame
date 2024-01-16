@@ -17,7 +17,7 @@ public class fishes {
     public boolean isAlive;
 
     public Rectangle rec;
-    public boolean isCrashing;
+    public boolean isCrashing = false;
     //a boolean to denote if the hero is alive or dead.
 
 
@@ -74,7 +74,7 @@ public class fishes {
         xpos = xpos + dx;
         ypos = ypos + dy;
         rec = new Rectangle(xpos, ypos, width, height);
-        System.out.println(ypos + ", "+ height+ ", "+ dy);
+       // System.out.println(ypos + ", "+ height+ ", "+ dy);
 
     }
     public void wrap() {

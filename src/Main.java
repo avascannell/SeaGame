@@ -77,28 +77,42 @@ public class Main implements Runnable {
     }
     public void moveThings()
     {
-        Fish1.wrap();
-        Fish2.wrap();
-        Fish3.wrap();
-        Fish4.wrap();
-        Fish5.wrap();
-        Fish6.wrap();
+        if(Fish1.isAlive) {
+            Fish1.wrap();
+        }
+        if(Fish2.isAlive) {
+            Fish2.wrap();
+        }
+        if(Fish3.isAlive) {
+            Fish3.wrap();
+        }
+        if(Fish4.isAlive) {
+            Fish4.wrap();
+        }
+        if(Fish5.isAlive) {
+            Fish5.wrap();
+        }
+        if(Fish6.isAlive) {
+            Fish6.wrap();
+        }
         shark.bounce();
-        if(shark.rec.intersects(Fish1.rec)  && shark.isCrashing == false){
-            shark.height = 80;
-            shark.width=80;
+
+        if(shark.rec.intersects(Fish1.rec)  && shark.isCrashing == false && Fish1.isAlive){
+            shark.height = shark.height+15;
+            shark.width=shark.width+15;
           Fish1.isAlive = false;
 
-            shark.xpos = shark.xpos;
+            //shark.xpos = shark.xpos;
             shark.isCrashing=true;
+            System.out.println("dory");
 
         }
         if(shark.rec.intersects(Fish1.rec)== false){
             shark.isCrashing=false;
         }
-        if(shark.rec.intersects(Fish2.rec)  && shark.isCrashing == false){
-            shark.height = 100;
-            shark.width=100;
+        if(shark.rec.intersects(Fish2.rec)  && shark.isCrashing == false && Fish2.isAlive){
+            shark.height = shark.height+15;
+            shark.width= shark.width+15;
             Fish2.isAlive = false;
 
             shark.xpos = shark.xpos;
@@ -108,9 +122,9 @@ public class Main implements Runnable {
         if(shark.rec.intersects(Fish2.rec)== false){
             shark.isCrashing=false;
         }
-        if(shark.rec.intersects(Fish3.rec)  && shark.isCrashing == false){
-            shark.height = 120;
-            shark.width=120;
+        if(shark.rec.intersects(Fish3.rec)  && shark.isCrashing == false && Fish3.isAlive){
+            shark.height = shark.height+15;
+            shark.width=shark.width+15;
             Fish3.isAlive = false;
 
             shark.xpos = shark.xpos;
@@ -120,9 +134,9 @@ public class Main implements Runnable {
         if(shark.rec.intersects(Fish3.rec)== false){
             shark.isCrashing=false;
         }
-        if(shark.rec.intersects(Fish4.rec)  && shark.isCrashing == false){
-            shark.height = 140;
-            shark.width=140;
+        if(shark.rec.intersects(Fish4.rec)  && shark.isCrashing == false && Fish4.isAlive){
+            shark.height = shark.height+15;
+            shark.width=shark.width+15;
             Fish4.isAlive = false;
 
             shark.xpos = shark.xpos;
@@ -132,9 +146,9 @@ public class Main implements Runnable {
         if(shark.rec.intersects(Fish4.rec)== false){
             shark.isCrashing=false;
         }
-        if(shark.rec.intersects(Fish5.rec)  && shark.isCrashing == false){
-            shark.height = 160;
-            shark.width=160;
+        if(shark.rec.intersects(Fish5.rec)  && shark.isCrashing == false && Fish5.isAlive){
+            shark.height = shark.height+15;
+            shark.width=shark.width+15;
             Fish5.isAlive = false;
 
             shark.xpos = shark.xpos;
@@ -144,9 +158,9 @@ public class Main implements Runnable {
         if(shark.rec.intersects(Fish5.rec)== false){
             shark.isCrashing=false;
         }
-        if(shark.rec.intersects(Fish6.rec)  && shark.isCrashing == false){
-            shark.height = 180;
-            shark.width=180;
+        if(shark.rec.intersects(Fish6.rec)  && shark.isCrashing == false && Fish6.isAlive){
+            shark.height = shark.height+15;
+            shark.width=shark.width+15;
             Fish6.isAlive = false;
 
             shark.xpos = shark.xpos;
@@ -221,11 +235,11 @@ public class Main implements Runnable {
         }
 
         
-        g.drawImage(Fish3Pic, Fish3.xpos, Fish3.ypos, Fish3.width, Fish3.height, null);
-        g.drawImage(Fish4Pic, Fish4.xpos, Fish4.ypos, Fish4.width, Fish4.height, null);
+       // g.drawImage(Fish3Pic, Fish3.xpos, Fish3.ypos, Fish3.width, Fish3.height, null);
+        //g.drawImage(Fish4Pic, Fish4.xpos, Fish4.ypos, Fish4.width, Fish4.height, null);
         g.drawImage(sharkPic, shark.xpos, shark.ypos, shark.width, shark.height, null);
-        g.drawImage(Fish5Pic, Fish5.xpos, Fish5.ypos, Fish5.width, Fish5.height, null);
-        g.drawImage(Fish6Pic, Fish6.xpos, Fish6.ypos, Fish6.width, Fish6.height, null);
+       // g.drawImage(Fish5Pic, Fish5.xpos, Fish5.ypos, Fish5.width, Fish5.height, null);
+       // g.drawImage(Fish6Pic, Fish6.xpos, Fish6.ypos, Fish6.width, Fish6.height, null);
 
 
 
